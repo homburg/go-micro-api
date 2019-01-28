@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"os"
 
 	"github.com/byblix/go-micro/models"
 	"github.com/byblix/go-micro/services"
@@ -14,10 +13,6 @@ import (
 // TODO:
 // Create endpoint to send POST body from web app
 // redirect the body values to slack channel and write message
-
-var (
-	webhookURL = os.Getenv("SLACK_WEBHOOK")
-)
 
 // SlackAssignmentHandler to slack
 func SlackAssignmentHandler(w http.ResponseWriter, r *http.Request) {
