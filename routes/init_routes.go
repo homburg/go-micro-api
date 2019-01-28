@@ -3,6 +3,7 @@ package routes
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -15,8 +16,11 @@ func InitRoutes() {
 	// slack
 	r.HandleFunc("/v1/slack/users", GetSlackUsers).Methods("GET")
 	r.HandleFunc("/v1/slack/assignment", SlackAssignmentHandler).Methods("POST")
-	log.Fatal(http.ListenAndServe(":8085", r))
-
+	err := http.ListenAndServe(":8085", r)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("Now listening to env: %s on port: 8085", os.Getenv("ENV"))
 	// TODO:
 	// Error endpoints to slack channel from byrd web app
 
