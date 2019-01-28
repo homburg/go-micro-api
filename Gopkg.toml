@@ -48,4 +48,4 @@
 [metadata.heroku]
   root-package = "github.com/byblix/go-micro"
   go-version = "go1.11"
-  install = ["./.."]
+  install = ["./"]
