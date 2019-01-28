@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Set env
-	config.SetEnvironment("dev")
+	config.SetEnvironment("hello")
 	// Init routes from init_routes.go
 	routes.InitRoutes()
 
