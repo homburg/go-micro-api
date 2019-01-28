@@ -1,1 +1,1 @@
-web: go-micro
+web: ./go-micro
