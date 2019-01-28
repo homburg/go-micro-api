@@ -49,4 +49,3 @@
   root-package = "github.com/byblix/go-micro"
   go-version = "1.0"
   install = ["."]
-  ensure="false"
